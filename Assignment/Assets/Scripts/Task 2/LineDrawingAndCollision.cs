@@ -7,7 +7,7 @@ public class LineDrawingAndCollision : MonoBehaviour
 
     private void Update()
     {
-        if(Manager.Instance.currentState != Manager.state.Done) 
+        if(Task_2_Manager.Instance.currentState != Task_2_Manager.state.Done) 
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -25,7 +25,7 @@ public class LineDrawingAndCollision : MonoBehaviour
                 Vector3[] linePositions = new Vector3[lineRenderer.positionCount];
                 lineRenderer.GetPositions(linePositions);
 
-                Manager.Instance.isLineDrawingCompleted?.Invoke(linePositions);
+                Task_2_Manager.Instance.isLineDrawingCompleted?.Invoke(linePositions);
 
                 lineRenderer.positionCount = 0;
             }

@@ -6,9 +6,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Manager : MonoBehaviour
+public class Task_2_Manager : MonoBehaviour
 {
-    public static Manager Instance { get; private set; }
+    public static Task_2_Manager Instance { get; private set; }
     public LayerMask circleLayer;
     public Button restart;
 

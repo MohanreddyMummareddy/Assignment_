@@ -22,7 +22,7 @@ public class CircleSpawner : MonoBehaviour
         GenerateFixedSpawnPositions();
         SpawnCircles();
 
-        Manager.Instance.currentState = Manager.state.In_Progress;
+        Task_2_Manager.Instance.currentState = Task_2_Manager.state.In_Progress;
     }
 
     private void GenerateFixedSpawnPositions()
@@ -63,7 +63,7 @@ public class CircleSpawner : MonoBehaviour
 
         var randomCountOfCircles = UnityEngine.Random.Range(minCircleCount, maxCircleCount + 1);
 
-        Manager.Instance.circlesInitialized?.Invoke(randomCountOfCircles);
+        Task_2_Manager.Instance.circlesInitialized?.Invoke(randomCountOfCircles);
 
         for (Int16 i=0;i< randomCountOfCircles;i++)
         {
